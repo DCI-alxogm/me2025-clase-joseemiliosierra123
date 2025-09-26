@@ -1,0 +1,22 @@
+	Cuando se tiene un procedimiento experimental, hay 3 tipos de errores comunes:
+
+	1. Errores sistemáticos: errores que suceden siempre igual y van en una misma dirección (un resultado más alto o más bajo que el verdadero) y se deben a una mala calibración de un equipo, un reactivo contaminado. 
+	Se previenen calibrando los instrumentos o comparando con datos de referencia.
+
+	2. Errores aleatorios: errores producidos por factores que no podemos controlar (fluctuaciones de temperatura/agitación...) y cambian de forma aleatoria.
+	Se pueden minimizar con repeticiones del mismo experimento y la aplicación de estadística a los métodos y resultados.
+
+	3. Errores humanos: errores propiamente humanos causados por distracción o inexperiencia.
+
+
+	Para el análisis numérico, existen otros tipos de errores:
+
+	1. Errores de redondeo: los errores al redondear un número en un valor determinado, lo cual provoca la pérdida de información que los decimales eliminados aportan.
+	Un ejemplo es redondear π.
+
+	2. Errores de truncamiento: fijar un valor en un lugar decimal determinado, o el valor obtenido por la serie de Taylor.
+
+	3. Error de propagación: cuando un valor que tiene un error asociado se usa en otra operación, y este error se propaga a la nueva magnitud calculada.
+
+	4. Error de método: más que ser un error numérico, es cuando un método es no convergente o no devuelve el valor verdadero buscado.
+	Este error se corrige cambiando los parámetros del método en cuestión, o cambiando de método.
