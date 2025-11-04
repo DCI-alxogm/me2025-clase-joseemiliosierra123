@@ -43,6 +43,12 @@ int main()
                         
                         A[i+1][k] = pivote[k];
                     }
+                    //Se intercambia también el factor del vector b
+                    pivote[i] = b[i];
+                        
+                    b[i] = b[i+1];
+                        
+                    b[i+1] = pivote[i];
                 }
             }
         }
