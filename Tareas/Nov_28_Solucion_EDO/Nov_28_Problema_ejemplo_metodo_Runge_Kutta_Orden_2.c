@@ -33,6 +33,10 @@ int main(){
         vytemp = vy + 0.5 * h * k1y;
         vztemp = vz + 0.5 * h * k1z;
         
+        k2x = -k * v_total * vxtemp;
+        k2y = -k * v_total * vytemp - g;
+        k2z = -k * v_total * vztemp;
+        
         vxn = vx + (0.5 * k1x + 0.5 * k2x) * h;
         vyn = vy + (0.5 * k1y + 0.5 * k2y) * h;
         vzn = vz + (0.5 * k1z + 0.5 * k2z) * h;
