@@ -9,7 +9,7 @@
 
 int main(){
     
-    float g=9.81, k=0.1, h=0.01, t=0; //Parámetros fijos
+    float g=9.81, k=0.1, h=0.1, t=0; //Parámetros fijos
     float vx=20, vy=25, vz=15, phi, v_total; //Velocidades iniciales
     float ax, ay, az, vxn, vyn, vzn; //Aceleraciones y parámetros adicionales
     int iter=0, iter_max=600;
