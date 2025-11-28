@@ -10,12 +10,12 @@
 int main(){
     
     float g=9.81, k=0.1, h=0.01, t=0; //Parámetros fijos
-    float x=0, y=0, z=0, vx=20, vy=25, vz=15, phi, v_total; //Posiciones y velocidades iniciales
-    float ax, ay, az, xn, yn, zn, vxn, vyn, vzn; //Aceleraciones y parámetros adicionales
+    float vx=20, vy=25, vz=15, phi, v_total; //Velocidades iniciales
+    float ax, ay, az, vxn, vyn, vzn; //Aceleraciones y parámetros adicionales
     int iter=0, iter_max=600;
     
-    printf("%-6s %-8s %-10s %-10s %-10s %-10s %-10s %-10s\n",
-    "Iter","t","x","y","z","vx","vy","vz");
+    printf("%-6s %-8s %-10s %-10s %-10s\n",
+    "Iter","t","vx","vy","vz");
     
     do{
         
@@ -32,17 +32,9 @@ int main(){
         vyn = ay * h + vy;
         vzn = az * h + vz;
         
-        //Se repite el método de Euler para la posición
-        xn = vx*h + x;
-        yn = vy*h + y;
-        zn = vz*h + z;
+        printf("%-6d %-6.2f %-10.4f %-10.4f %-10.4f\n",
+        iter, t, vx, vy, vz);
         
-        printf("%-6d %-6.2f %-10.4f %-10.4f %-10.4f %-10.4f %-10.4f %-10.4f\n",
-        iter, t, x, y, z, vx, vy, vz);
-        
-        x = xn;
-        y = yn;
-        z = zn;
         vx = vxn;
         vy = vyn;
         vz = vzn;
@@ -50,11 +42,6 @@ int main(){
         t = h + t;
         
         iter++;
-        
-        //El programa se detiene cuando el proyectil llegue al suelo
-        if (y<0){
-        break;
-        }
         
     } while (iter < iter_max);
     
